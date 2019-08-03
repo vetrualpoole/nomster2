@@ -14,8 +14,7 @@
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="#">Nomster2</a>
-      <%= link_to 'Nomster', root_path, class: 'navbar-brand' %>
+      <%= link_to 'Nomster2', root_path, class: 'navbar-brand' %>
 
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul class="navbar-nav mr-auto mt-2 mt-md-0">
@@ -26,15 +25,26 @@
             <% end %>
           </li>
         </ul>
-      </div>
-    </nav>
+        <ul class="navbar-nav">
+      <% if user_signed_in? %>
+        <li class="nav-item">
+          <%= link_to 'A user is signed in!', '#', class: 'nav-link' %>
+        </li>
+      <% else %>
+        <li class="nav-item">
+          <%= link_to 'No user is signed in :(', '#', class: 'nav-link' %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+ </nav>
 
     <% if notice.present? %>
   <p class="alert alert-info"><%= notice %></p>
 <% end %>
 <% if alert.present? %>
   <p class="alert alert-danger"><%= alert %></p>
-<% end %>ert %></p>
+<% end %>
 
 
     <%= yield %>
