@@ -1,6 +1,5 @@
 class PlacesController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
- 
   
   def index
     @places = Place.all
@@ -51,5 +50,5 @@ end
   def place_params
     params.require(:place).permit(:name, :description, :address)
   end
-end 
+end
 
