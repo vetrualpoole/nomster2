@@ -1,4 +1,4 @@
-=beginclass PhotosController < ApplicationController
+class PhotosController < ApplicationController
 # Adding comment to update github    
      def create
         @place = Place.find(params[:place_id])
@@ -12,4 +12,4 @@
   def photo_params
     params.require(:photo).permit(:caption)
   end
-end=end
+end
