@@ -103,14 +103,14 @@
   
 
 <!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="myphotoModal" tabindex="-1" role="dialog" aria-labelledby="myModalphotoLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">×</span>
         </button>
-        <h5 class="modal-title" id="myModalLabel">Add a photo</h5>
+        <h5 class="modal-title" id="myphotoModalLabel">Add a photo</h5>
       </div>
       <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
         <div class="modal-body">
@@ -130,7 +130,7 @@
 
 
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary btn-lg float-right" data-toggle="modal" data-target="#myModal">
+    <button type="button" class="btn btn-primary btn-lg float-right" data-toggle="modal" data-target="#myphotoModal">
       Add a photo
     </button>
     </div>
