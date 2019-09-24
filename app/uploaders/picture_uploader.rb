@@ -4,7 +4,11 @@ class PictureUploader < CarrierWave::Uploader::Base
   # include CarrierWave::MiniMagick
 
   # Choose what kind of storage to use for this uploader:
+<<<<<<< HEAD
   storage :fog
+=======
+  storage :file
+>>>>>>> 077db2376a6a27e59934e1ab898cf5fce268cf43
   # storage :fog
 
   # Override the directory where uploaded files will be stored.

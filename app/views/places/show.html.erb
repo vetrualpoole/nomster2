@@ -100,6 +100,7 @@
     <% end %>
   </div>
 
+<<<<<<< HEAD
   
 
 <!-- Modal -->
@@ -147,3 +148,10 @@
             </div>
         <% end %>
        
+=======
+  <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
+    <%= f.input :caption %>
+    <%= f.input :picture %>
+    <%= f.submit "Add a Photo", class: 'btn btn-primary' %>
+<% end %>
+>>>>>>> 077db2376a6a27e59934e1ab898cf5fce268cf43
