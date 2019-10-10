@@ -1,6 +1,8 @@
 class Comment < ApplicationRecord
     belongs_to :user
-    belongs_to :place
+    belongs_to :place, dependent:
+  :destroy
+  end
     after_create :send_comment_email
 
 
